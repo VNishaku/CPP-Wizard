@@ -20,36 +20,38 @@ abx_exchange_client/
 └── README.md            # This file
 ```
 
-## Building the Project
+## Execution Instructions
 
-1. Create and enter the build directory:
-```powershell
-mkdir build
-cd build
-```
+1. **Start the Server**:
+   ```powershell
+   # Open a new terminal and run
+   node main.js
+   ```
+   You should see: "TCP server started on port 3000."
 
-2. Generate build files:
-```powershell
-cmake ..
-```
+2. **Build the Client**:
+   ```powershell
+   # Create build directory
+   mkdir build
+   cd build
 
-3. Build the project:
-```powershell
-cmake --build . --config Release
-```
+   # Generate build files
+   cmake ..
 
-## Running the Application
+   # Build the project
+   cmake --build . --config Release
+   ```
 
-1. Start the ABX exchange server:
-```powershell
-node main.js
-```
+3. **Run the Client**:
+   ```powershell
+   # In the build directory
+   .\Release\abx_client.exe
+   ```
 
-2. In a new terminal, run the client:
-```powershell
-cd build
-.\Release\abx_client.exe
-```
+4. **Verify Output**:
+   - Check for `abx_packets.json` in the current directory
+   - Check for `abx_client.log` for any errors
+   - The client will display processing time when complete
 
 ## Output
 
